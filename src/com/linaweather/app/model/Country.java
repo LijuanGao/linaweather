@@ -4,7 +4,7 @@ public class Country {
 	private int id;
 	private String countryName;
 	private String countryCode;
-	public int  cityId;
+	private int  cityId;
 	
 	public int  getId(){
 		return id;

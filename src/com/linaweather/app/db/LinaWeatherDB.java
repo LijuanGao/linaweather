@@ -73,7 +73,7 @@ public class LinaWeatherDB {
 	}
 	
 	//从数据库中读取City信息
-	public List<City> loadCities(){
+	public List<City> loadCities( int provinceId ){
 		List<City> list = new ArrayList<City>();
 		Cursor cursor = db.query("City", null, "province_id=?", null, null, null, null);
 		if(cursor.moveToFirst()){
@@ -104,7 +104,7 @@ public class LinaWeatherDB {
 	}
 	
 	//从数据库中读取Country信息
-	public List<Country> loadCountries(){
+	public List<Country> loadCountries( int cityId){
 		List<Country> list = new ArrayList<Country>();
 		Cursor cursor = db.query("Country", null, "city_id = ?", null, null, null, null);
 		if(cursor.moveToFirst()){
